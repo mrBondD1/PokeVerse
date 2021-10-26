@@ -40,11 +40,11 @@ function App() {
       }}/>
       <button onClick={searchPokemon}>Search Pokemon</button>
       </div>
-      <div className="displayInfo">
+      <div >
       {!choosenPokemon ? (
-        <h1>Please choose a valid pokemon!</h1>
+       <p>Enter a valid pokemon name. Ex: 'charmander'</p>
       ) : (
-        <>
+        <div className="displayInfo">
         <h1>{pokemonInfo.name}</h1>
         <img src={pokemonInfo.img} alt="" />
         <h3> Species: {pokemonInfo.species}</h3>
@@ -52,7 +52,7 @@ function App() {
         <h4> Hp: {pokemonInfo.hp}</h4>
         <h4> Attack: {pokemonInfo.attack}</h4>
         <h4> Defense: {pokemonInfo.defence}</h4>
-        </>
+        </div>
       )
     }
       </div>
